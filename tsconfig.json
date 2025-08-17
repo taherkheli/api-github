@@ -1,0 +1,19 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    "target": "ESNext",               // Modern JS (Vitest/ESM-friendly)
+    "module": "ESNext",               // ES Modules (for Vitest/Vite)
+    "moduleResolution": "node",       // Standard for Node.js/axios
+    "strict": true,                   // Enable all strict checks
+    "esModuleInterop": true,          // Axios interop (CommonJS ↔ ESM)
+    "skipLibCheck": true,             // Faster builds (skip .d.ts checks)
+    "forceConsistentCasingInFileNames": true, // Avoid filesystem issues
+    "rootDir": "./tests",             // Treat tests/ as root
+    "types": ["vitest/globals"],      // Vitest global types (describe, it, etc.)
+    "lib": ["ESNext", "DOM"]          // DOM types (if axios is used in browser-like env)
+  },
+  "include": ["tests/**/*.ts"],       // All TS files in tests/
+  "exclude": ["node_modules", "dist"] // Standard exclusions
+}
+
+
