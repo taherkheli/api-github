@@ -11,7 +11,7 @@ export function createHttpClient(customConfig?: {
     headers: {
       'Accept': 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
-      'Authorization': `Bearer ${process.env.GITHUB_PAT!}`,
+      'Authorization': `Bearer ${process.env.API_TOKEN!}`,
       'User-Agent': 'axios/1.11.0',
     },
   };
