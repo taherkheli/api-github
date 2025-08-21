@@ -12,7 +12,7 @@ try {
 }
 
 // Validate required environment variables
-const requiredEnvVars = ['API_BASE_URL', 'GITHUB_PAT'];
+const requiredEnvVars = ['API_BASE_URL', 'API_TOKEN'];
 requiredEnvVars.forEach(envVar => {
   if (!process.env[envVar]) {
     throw new Error(
@@ -24,4 +24,4 @@ requiredEnvVars.forEach(envVar => {
 
 console.log('Environment variables loaded successfully!');
 console.log('API_BASE_URL:', process.env.API_BASE_URL);
-console.log('GITHUB_PAT:', process.env.GITHUB_PAT?.substring(0, 8) + '...'); // Mask token
+console.log('API_TOKEN:', process.env.API_TOKEN?.substring(0, 8) + '...'); // Mask token
