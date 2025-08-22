@@ -1,8 +1,13 @@
 {
   "name": "api-github",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint tests/ --ext .ts",
+    "lint:fix": "eslint tests/ --ext .ts --fix",
+    "format": "prettier --write tests/**/*.ts",
+    "format:check": "prettier --check tests/**/*.ts",
     "test": "npx vitest",
     "test:watch": "vitest"
   },
@@ -11,8 +16,14 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.40.0",
+    "@typescript-eslint/parser": "^8.40.0",
     "axios": "^1.11.0",
     "dotenv": "^17.2.1",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.6.2",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
