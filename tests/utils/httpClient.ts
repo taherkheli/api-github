@@ -9,9 +9,9 @@ export function createHttpClient(customConfig?: {
     baseURL: process.env.API_BASE_URL!,
     timeout: 10000,
     headers: {
-      'Accept': 'application/vnd.github+json',
+      Accept: 'application/vnd.github+json',
       'X-GitHub-Api-Version': '2022-11-28',
-      'Authorization': `Bearer ${process.env.API_TOKEN!}`,
+      Authorization: `Bearer ${process.env.API_TOKEN!}`,
       'User-Agent': 'axios/1.11.0',
     },
   };

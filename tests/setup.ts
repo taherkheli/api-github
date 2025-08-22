@@ -7,17 +7,17 @@ import { resolve } from 'path';
 try {
   const envPath = resolve(process.cwd(), '.env');
   config({ path: envPath });
-} catch (error) {
-  // .env file doesn't exist or cant be loaded - that's fine
+} catch (_error) {
+  // .env file doesn't exist or can't be loaded - that's fine
 }
 
 // Validate required environment variables
 const requiredEnvVars = ['API_BASE_URL', 'API_TOKEN'];
-requiredEnvVars.forEach(envVar => {
+requiredEnvVars.forEach((envVar) => {
   if (!process.env[envVar]) {
     throw new Error(
       `Missing required environment variable: '${envVar}'. ` +
-      `Set it in .env file for local development or as a GitHub Secret for CI/CD.`
+        `Set it in .env file for local development or as a GitHub Secret for CI/CD.`
     );
   }
 });
